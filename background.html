@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: none;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #image-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        #image-input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        #submit-button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="image-container">
+        <input type="text" id="image-input" placeholder="Enter Image URL">
+        <button id="submit-button" onclick="displayImage()">Submit</button>
+    </div>
+
+    <script>
+        function displayImage() {
+            const imageUrl = document.getElementById('image-input').value;
+            document.body.style.backgroundImage = `url('${imageUrl}')`;
+        }
+    </script>
+</body>
+</html

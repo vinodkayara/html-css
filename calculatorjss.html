@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            text-align: center;
+            background-color: #f0f0f0;
+        
+        }
+        .calculator {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            
+        }
+        input[type="number"] {
+            width: 250px;
+            padding: 5px;
+            margin: 5px;
+        }
+        input[type="text"] {
+            width: 150px;
+            padding: 5px;
+            margin: 5px;
+        }
+        button {
+            width: 100px;
+            padding: 10px;
+            margin: 5px;
+            background-color: #3498db;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow:black;
+        }
+        button.clear {
+            background-color: #e74c3c;
+            border: 2px  black solid;
+            width: 200px;
+            
+        }
+        button.add {
+            background-color:greenyellow;
+            border: 2px  black solid;
+        }
+        button.sub {
+            background-color:rgb(255, 47, 82);
+            border: 2px  black solid;
+        }
+        button.mul {
+            background-color:rgb(255, 203, 47);
+            border: 2px  black solid;
+        }
+        button.div {
+            background-color:rgb(47, 189, 255);
+            border: 2px  black solid;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="number" id="num1" placeholder="Enter number" ></br>
+        <input type="number" id="num2" placeholder="Enter number">
+        <input type="text" id="result" placeholder="Result" disabled>
+        <br>
+        <button class="add" onclick="add()">Add</button>
+        <button class="sub" onclick="subtract()">Subtract</button></br>
+        <button class="mul" onclick="multiply()">Multiply</button>
+        <button class="div" onclick="divide()">Divide</button></br>
+        <button class="clear" onclick="clearResult()">Clear</button>
+    </div>
+
+    <script>
+        function add() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            document.getElementById("result").value = num1 + num2;
+        }
+
+        function subtract() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            document.getElementById("result").value = num1 - num2;
+        }
+
+        function multiply() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            document.getElementById("result").value = num1 * num2;
+        }
+
+        function divide() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            if (num2 === 0) {
+                alert("Cannot divide by zero");
+            } else {
+                document.getElementById("result").value = num1 / num2;
+            }
+        }
+
+        function clearResult() {
+            document.getElementById("num1").value = "";
+            document.getElementById("num2").value = "";
+            document.getElementById("result").value = "";
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>

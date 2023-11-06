@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #a7cc00;
+        }
+
+        .inputs {
+            display: flex;
+            gap: 10px;
+        }
+
+        .output {
+            margin-top: 20px;
+        }
+
+        input {
+            padding: 5px;
+            margin: 5px;
+        }
+
+        #generate {
+            margin-top: 10px;
+            background-color: #0074cc;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #generate:hover {
+            background-color: #0056a2;
+        }
+
+        #clear {
+            margin-top: 10px;
+            background-color: #cc0000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #clear:hover {
+            background-color: #a20000;
+        }
+        .table-container {
+            background-color: grey;
+            padding: 20px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="inputs">
+            <input type="text" id="textInput" placeholder="Enter text">
+            <input type="number" id="numInput" placeholder="Enter number">
+        </div>
+        <button id="generate">Generate</button>
+        <button id="clear">Clear</button>
+        
+    </div>
+    <div class="table-container">
+        <div id="output"></div>
+        <div class="output" id="outputContainer" text-alignment="center"></div>
+    </div>
+
+    <script>
+        const generateButton = document.getElementById('generate');
+        const clearButton = document.getElementById('clear');
+        const outputContainer = document.getElementById('outputContainer');
+        
+
+        generateButton.addEventListener('click', () => {
+            const textInput = document.getElementById('textInput').value;
+            const numInput = document.getElementById('numInput').value;
+            const tableContainer = document.getElementById('output');
+            let outputText = '';
+
+            for (let i = 0; i < numInput; i++) {
+                outputText += textInput + '<br>';
+            }
+
+            outputContainer.innerHTML = outputText;
+        });
+
+        clearButton.addEventListener('click', () => {
+            document.getElementById('textInput').value = '';
+            document.getElementById('numInput').value = '';
+            outputContainer.innerHTML = '';
+        });
+    </script>
+</body>
+</html>

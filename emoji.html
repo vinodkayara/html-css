@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(162, 81, 81);
+        }
+
+        .face, .face1 {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: yellow;
+            box-shadow: inset;
+            position: relative;
+            margin: 10px;
+            box-shadow: 1px 1px 1px 1px rgb(36, 36, 36);
+        }
+
+        .eye {
+            width: 30px;
+            height: 30px;
+            background-color: rgb(182, 187, 191);
+            border-radius: 50%;
+            position: absolute;
+            top: 22px;
+            left: 10px;
+            box-shadow: 1px 1px 1px 1px rgb(36, 36, 36);
+        }
+        .eye1 {
+            width: 30px;
+            height: 30px;
+            background-color: yellow;
+            border-radius: 50%;
+            position: absolute;
+            top: 22px;
+            left: 10px;
+            
+        }
+        .eye2 {
+            width: 30px;
+            height: 30px;
+            background-color: rgb(200, 210, 219);
+            border-radius: 50%;
+            position: absolute;
+            top: 22px;
+            left: 10px;
+            box-shadow: 1px 1px 1px 1px rgb(36, 36, 36);
+        }
+        .eye3 {
+            width: 30px;
+            height: 20px;
+            background-color: aliceblue;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            
+            position: absolute;
+            top: 30px;
+            left: 10px;
+            box-shadow: 1px 1px 1px 1px rgb(36, 36, 36);
+        }
+
+        .eye:last-child, .eye1:last-child,.eye2:last-child, .eye3:last-child {
+            left: auto;
+            right: 12px;
+        }
+
+        .eye::after {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          
+        }
+        .eye1::after {
+            content: "";
+            width: 25px;
+            height: 5px;
+            background-color: black;
+            border-radius: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+        }
+        .eye3::after {
+            content: "";
+            width: 12px;
+            height: 8px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 20%;
+            left: 80%;
+            transform: translate(-50%, -50%);
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+        .eye2::after {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .mouth, .mouth1,.mouth2, .mouth3 {
+            width: 40px;
+            height: 5px;
+            background-color: black;
+            border-radius: 50px;
+            position: absolute;
+            bottom: 20px;
+            left: 30px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji</title>
+</head>
+<body>
+    <div class="emoji">
+        <div class="face">
+            <div class="eyes">
+                <div class="eye"></div>
+                <div class="eye"></div>
+            </div>
+            <div class="mouth"></div>
+        </div>
+    </div>
+    <div class="emoji">
+        <div class="face1">
+            <div class="eyes1">
+                <div class="eye1"></div>
+                <div class="eye1"></div>
+            </div>
+            <div class="mouth1"></div>
+        </div>
+    </div>
+    <div class="emoji">
+        <div class="face">
+            <div class="eyes2">
+                <div class="eye2"></div>
+                <div class="eye2"></div>
+            </div>
+            <div class="mouth2"></div>
+        </div>
+    </div>
+    <div class="emoji2">
+        <div class="face1">
+            <div class="eyes3">
+                <div class="eye3"></div>
+                <div class="eye3"></div>
+            </div>
+            <div class="mouth3"></div>
+        </div>
+    </div>
+</body>
+</html>
